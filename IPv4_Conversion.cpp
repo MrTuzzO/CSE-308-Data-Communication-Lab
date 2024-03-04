@@ -23,22 +23,22 @@ void conToBin(string byte){
 void binary(string IP){
     stringstream ss(IP);
     string byte;
-    bool firstWord = true;
+    bool firstByte = true;
     while (getline(ss, byte, '.')){
-        if (!firstWord) cout << ".";
+        if (!firstByte) cout << ".";
         conToDec(byte);
-        firstWord = false;
+        firstByte = false;
     }
 }
 
 void decimal(string IP){
     stringstream ss(IP);
     string byte;
-    bool firstWord = true;
+    bool firstByte = true;
     while (getline(ss, byte, '.')){
-        if (!firstWord) cout << ".";
+        if (!firstByte) cout << ".";
         conToBin(byte);
-        firstWord = false;
+        firstByte = false;
     }
 }
 
